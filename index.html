@@ -2004,11 +2004,15 @@
 
   signBtn?.addEventListener('click', () => {
     playClosingReel();
-    setTimeout(() => {
-      const subject = 'Yes — let\'s make it';
-      const body = 'Hi Charlie,\n\nI\'m in. Please send the deposit invoice and let\'s get the shoot date in.\n\n— PTAM';
-      window.location.href = `mailto:charlie@tillettfilm.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    }, 200);
+    fetch('https://formspree.io/f/mbdezvvn', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({
+        subject: 'PTAM — Greenlight the Film',
+        message: 'PTAM has clicked Greenlight the Film. Send the deposit invoice and confirm the production date.',
+        _replyto: 'charlie@tillettfilm.com'
+      })
+    }).catch(() => {});
   });
 </script>
 
