@@ -1234,7 +1234,7 @@
     background-position: center;
   }
   .closing-reel.no-video.visible .reel-flash {
-    animation: reelCut 2.0s steps(1, end) 1 forwards;
+    animation: reelCut 1.0s steps(1, end) 1 forwards;
   }
   .reel-flash:nth-child(1) { background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); animation-delay: 0s; }
   .reel-flash:nth-child(2) { background: linear-gradient(45deg, #2a2520 0%, #0a0a0a 100%); animation-delay: 0.18s; }
@@ -1955,14 +1955,14 @@
           closingReelVideo.muted = true;
           closingReelVideo.play().catch(() => {
             closingReel.classList.add('no-video');
-            setTimeout(() => closingReel.classList.add('show-text'), 2000);
+            setTimeout(() => closingReel.classList.add('show-text'), 1000);
           });
         });
       }
       closingReelVideo.addEventListener('ended', () => closingReel.classList.add('show-text'));
-      setTimeout(() => closingReel.classList.add('show-text'), 2000);
+      setTimeout(() => closingReel.classList.add('show-text'), 1000);
     } else {
-      setTimeout(() => closingReel.classList.add('show-text'), 2000);
+      setTimeout(() => closingReel.classList.add('show-text'), 1000);
     }
   }
 
