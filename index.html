@@ -81,26 +81,16 @@
   .cover-hero-wrap img { width: 100%; display: block; }
   .cover-photo-credit {
     position: absolute;
-    bottom: 12px;
-    right: 14px;
-    font-family: 'Allura', cursive;
-    font-weight: 400;
-    font-size: 17px;
-    color: rgba(255,255,255,0.82);
-    line-height: 1.4;
-    text-align: right;
-    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
-    pointer-events: none;
-  }
-  .cover-photo-credit span {
-    display: block;
+    bottom: 14px;
+    left: 16px;
     font-family: var(--sans);
-    font-size: 9px;
+    font-size: 8.5px;
     font-weight: 400;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.55);
-    margin-bottom: 2px;
+    color: rgba(255,255,255,0.75);
+    pointer-events: none;
+    line-height: 1.8;
   }
 
   /* ===== Top bar ===== */
@@ -954,13 +944,14 @@
 
   /* ===== Work showcase ===== */
   .work-showcase {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr;
-    gap: 24px;
     margin-top: 22px;
-    align-items: start;
   }
-  @media (max-width: 900px) { .work-showcase { grid-template-columns: 1fr; gap: 18px; } }
+  .work-secondary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 28px;
+  }
+  @media (max-width: 700px) { .work-secondary-grid { grid-template-columns: 1fr; } }
 
   .work-featured { display: flex; flex-direction: column; }
   .work-featured-frame {
@@ -1021,10 +1012,9 @@
     gap: 12px;
   }
   .work-card {
-    display: grid;
-    grid-template-columns: 96px 1fr;
-    gap: 14px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
     cursor: pointer;
     transition: opacity 0.2s;
   }
@@ -1073,6 +1063,15 @@
     font-size: 11px;
     color: var(--ink-soft);
     line-height: 1.45;
+  }
+  .work-card-note {
+    font-size: 10px;
+    font-style: italic;
+    color: var(--ink-muted);
+    line-height: 1.45;
+    margin-top: 5px;
+    padding-top: 5px;
+    border-top: 1px solid var(--line);
   }
 
   /* ===== Image placeholders (visible "image needed" cells) ===== */
@@ -1318,14 +1317,13 @@
       <div class="cover-hero-wrap">
         <img src="assets/crtkmb.jpg" alt="" class="cover-hero-img">
         <div class="cover-photo-credit">
-          <span>Photograph</span>
-          Charlie Tillett · Ras Al Khaimah
+          Shot by Charlie Tillett · Ras Al Khaimah · Arabian Desert
         </div>
       </div>
 
       <h1 class="cover-title">The First Cut.</h1>
-      <p class="cover-prepared">A creative direction document, prepared by hand for <strong>Progressive Technology Advanced Materials</strong>.</p>
-      <p class="cover-tagline">Built around what you told me last Tuesday. Read it as the start of the film, not the end of the proposal.</p>
+      <p class="cover-prepared">A creative direction presentation, prepared by hand for <strong>Progressive Technology Advanced Materials</strong>.</p>
+      <p class="cover-tagline">Built around your brief. Designed for Farnborough.<br>This is the film before the film.</p>
 
       <div class="slate">
         <div class="slate-item">
@@ -1367,12 +1365,9 @@
              Local file:  <video src="assets/welcome.mp4" controls playsinline></video>
              Vimeo:       <iframe src="https://player.vimeo.com/video/XXXXXX" allow="autoplay; fullscreen"></iframe>
              YouTube:     <iframe src="https://www.youtube.com/embed/XXXXXX" allow="autoplay; fullscreen"></iframe> -->
-        <div class="video-placeholder" id="welcomeVideo">
-          <div class="play-button"></div>
-          <div class="video-caption">A note from Charlie · 0:45</div>
-        </div>
+        <video src="assets/IMG_3048.mov" controls playsinline style="width:100%;height:100%;display:block;"></video>
       </div>
-      <p class="video-tag"><strong>In the video:</strong> the shape of the document, the moment to sign, and how to reach me if you'd rather talk it through.</p>
+      <p class="video-tag"><strong>In the video:</strong> a walkthrough of the film proposal, the production approach and what happens after green light.</p>
 
       <!-- DIRECTOR CREDITS — film-style bio list. Each line is a credit. -->
       <div class="director-credits">
@@ -1382,9 +1377,9 @@
           <span class="director-credit-value">2020</span>
         </div>
         <div class="director-credit-line">
-          <span class="director-credit-role">Founder portraits</span>
+          <span class="director-credit-role">Founder projects</span>
           <span class="director-credit-rule"></span>
-          <span class="director-credit-value">40+ delivered</span>
+          <span class="director-credit-value">150+ delivered</span>
         </div>
         <div class="director-credit-line">
           <span class="director-credit-role">Brands this year</span>
@@ -1407,40 +1402,40 @@
         <div class="label-caps">Act 03</div>
         <div class="film-credit-role">Based on the words of</div>
         <h2 class="film-credit-name">PTAM</h2>
-        <p class="film-credit-byline">From our meeting last Tuesday. Everything below is built around what PTAM said: the commercial outcome, the audience, the restrictions and the standard the film has to communicate before a conversation starts.</p>
+        <p class="film-credit-byline">Key points drawn from our brief and conversations. What I heard, and what that means for the film.</p>
       </div>
 
       <div class="listening-pairs">
 
         <div class="listening-pair">
           <div class="quote-card">
-            <div class="quote-card-label">No. 01 · The Commercial Outcome</div>
-            <div class="quote-card-text">To expose the business to a new market, develop new business, and spark conversation with aerospace and defence buyers.</div>
+            <div class="quote-card-label">No. 01 · The Purpose</div>
+            <div class="quote-card-text">To expose PTAM to a new market and spark meaningful conversation with aerospace and defence specialists at Farnborough.</div>
           </div>
           <div class="interpretation-card">
-            <div class="interpretation-label">Through the Lens</div>
-            <div class="interpretation-text">This is not a standard advertisement. It is a capability film designed to pull the right people towards the stand before a sales conversation begins.</div>
+            <div class="interpretation-label">Through My Lens</div>
+            <div class="interpretation-text">The film draws the right people towards the stand. The conversation that follows is supported by PTAM's team and the technical expertise behind them.</div>
           </div>
         </div>
 
         <div class="listening-pair">
           <div class="quote-card">
             <div class="quote-card-label">No. 02 · The Audience</div>
-            <div class="quote-card-text">Aerospace and defence buyers need to see scale, capability and precision, not just speed.</div>
+            <div class="quote-card-text">Aerospace and defence specialists need to see scale, capability and precision, not just speed.</div>
           </div>
           <div class="interpretation-card">
-            <div class="interpretation-label">Through the Lens</div>
-            <div class="interpretation-text">The film should move with control. Forced-cooled autoclave, 5-axis machining, CAD/CAM, hand finishing and inspection, shown as proof of capacity, reliability and repeatable quality.</div>
+            <div class="interpretation-label">Through My Lens</div>
+            <div class="interpretation-text">Forced-cooled autoclave, 5-axis machining, CAD/CAM, hand finishing and inspection. Shown as proof of capacity, reliability and repeatable quality.</div>
           </div>
         </div>
 
         <div class="listening-pair">
           <div class="quote-card">
             <div class="quote-card-label">No. 03 · The Standard</div>
-            <div class="quote-card-text">Capability, partnerships, trust and reliability need to be unmistakable. Components are NDA, customer names must not be shown.</div>
+            <div class="quote-card-text">Capability, partnerships, trust and reliability need to be unmistakable. Components are NDA protected and customer names must not be shown.</div>
           </div>
           <div class="interpretation-card">
-            <div class="interpretation-label">Through the Lens</div>
+            <div class="interpretation-label">Through My Lens</div>
             <div class="interpretation-text">The visual approach must project confidentiality while still showing confidence. No exposed customer names or sensitive components. We'll show the rhythm of a reactive business: active machinery, the team, craftsmanship, materials handled precisely, quality delivered every time.</div>
           </div>
         </div>
@@ -1457,7 +1452,7 @@
       <div class="scene-header">
         <div class="label-caps">Act 04 · The Film</div>
         <h2 class="heading-large">Built for the stand. Made to travel further.</h2>
-        <p class="body-large" style="margin-top:14px; max-width:720px;">This film is designed first for Farnborough: a silent, looping 16:9 film displayed on a 42-inch screen above the stand. Its job is to pull aerospace and defence buyers in, show PTAM's capability quickly and create the right conversation before anyone has spoken to the team.</p>
+        <p class="body-large" style="margin-top:14px; max-width:720px;">This film is designed first for Farnborough: a silent, looping 16:9 film displayed on a 42-inch screen above the stand. Its job is to draw the right people in, communicate PTAM's capability, precision and excellence, and start the right conversation before anyone has spoken to the specialist team.</p>
       </div>
 
       <div class="pillars-grid">
@@ -1492,26 +1487,13 @@
       <div class="scene-header">
         <div class="label-caps">Act 05 · Filmography</div>
         <h2 class="heading-large">Selected works.</h2>
-        <p class="body-large" style="margin-top:14px; max-width:680px;">One feature for the kind of film I'm proposing for you, plus three from the wider catalogue.</p>
+        <p class="body-large" style="margin-top:14px; max-width:680px;">Four films selected for reference. Press play on any of them.</p>
       </div>
 
       <div class="work-showcase">
-        <!-- FEATURED WORK -->
-        <div class="work-featured">
-          <div class="work-featured-frame" id="featuredPlayer">
-            <img src="assets/Ollie Ollerton Thumbnail.jpg" alt="Ollie Ollerton" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-          </div>
-          <div class="work-featured-meta">
-            <div class="work-featured-cat">Founder Film</div>
-            <div class="work-featured-title">Ollie Ollerton</div>
-            <div class="work-featured-desc">A morning routine portrait built around presence, discipline and quiet authority.</div>
-          </div>
-        </div>
-
-        <!-- SECONDARY WORK -->
         <div class="work-secondary-col">
-        <div class="work-secondary-label">Press play for some examples</div>
         <div class="work-secondary">
+          <div class="work-secondary-grid">
           <div class="work-card">
             <div class="work-card-thumb video-thumb" style="background:#0a0a0a;" data-video="assets/Myzone.mp4">
               <img src="assets/myzone thumnail.jpg" alt="Myzone Motech" style="width:100%;height:100%;object-fit:cover;display:block;">
@@ -1521,6 +1503,7 @@
               <div class="work-card-cat">Brand Film</div>
               <div class="work-card-title">Myzone: Motech</div>
               <div class="work-card-desc">Performance told through movement. A brand film built around the technology that tracks the effort nobody sees.</div>
+              <div class="work-card-note">The professionalism really stands out. A film that advertises seriously, just like the work PTAM produces.</div>
             </div>
           </div>
           <div class="work-card">
@@ -1532,17 +1515,19 @@
               <div class="work-card-cat">Event Film</div>
               <div class="work-card-title">Pete Taylor: MM300</div>
               <div class="work-card-desc">A fraction of the event captured as a single cinematic piece building anticipation.</div>
+              <div class="work-card-note">The pacing is exactly what we need at Farnborough. Captivating, draws you in and keeps you there.</div>
             </div>
           </div>
           <div class="work-card">
             <div class="work-card-thumb video-thumb" style="background:#0a0a0a;" data-video="assets/Habitual by Giles Denning_web.mp4">
-              <img src="assets/2026-05-10_HABITUAL_CHARLIETILLETT-3.jpg" alt="Giles Denning Habitual" style="width:100%;height:100%;object-fit:cover;display:block;">
+              <img src="assets/habitual thumb.jpg" alt="Giles Denning Habitual" style="width:100%;height:100%;object-fit:cover;display:block;">
               <div class="work-card-thumb-play"></div>
             </div>
             <div class="work-card-meta">
               <div class="work-card-cat">Campaign</div>
               <div class="work-card-title">Giles Denning: Perform X</div>
               <div class="work-card-desc">The official launch of Habitual: The Berkshire Men's Club film powering an impeccable concept.</div>
+              <div class="work-card-note">All of these films combined focus on curating a strong emotion. Alongside PTAM's precision, it's important to deliver a piece that grips people.</div>
             </div>
           </div>
           <div class="work-card">
@@ -1551,10 +1536,12 @@
               <div class="work-card-thumb-play"></div>
             </div>
             <div class="work-card-meta">
-              <div class="work-card-cat">Founder Film</div>
+              <div class="work-card-cat">Founder Project</div>
               <div class="work-card-title">Ollie Ollerton</div>
               <div class="work-card-desc">A morning routine portrait built around presence, discipline and quiet authority.</div>
+              <div class="work-card-note">Without a word being said, you get the memo. Everything we're looking to create with this project.</div>
             </div>
+          </div>
           </div>
         </div>
         </div>
@@ -1735,11 +1722,11 @@
         </div>
         <div class="agreement-step">
           <span class="agreement-step-num">No. 02</span>
-          <span><strong>50% deposit</strong> confirms the shoot date. Balance due the day before we shoot, 25 June or 1 July 2026.</span>
+          <span><strong>50% deposit</strong> confirms the production date. Remaining balance due before the shoot.</span>
         </div>
         <div class="agreement-step">
           <span class="agreement-step-num">No. 03</span>
-          <span><strong>Pre-production kicks off on green light.</strong> Shoot on 25 June or 1 July. Final assets delivered ahead of Farnborough.</span>
+          <span><strong>Pre-production kicks off on green light.</strong> Final assets delivered ahead of Farnborough.</span>
         </div>
       </div>
 
