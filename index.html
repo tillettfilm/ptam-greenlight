@@ -1225,16 +1225,16 @@
     background-position: center;
   }
   .closing-reel.no-video.visible .reel-flash {
-    animation: reelCut 5.6s steps(1, end) 1 forwards;
+    animation: reelCut 2.0s steps(1, end) 1 forwards;
   }
   .reel-flash:nth-child(1) { background: linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); animation-delay: 0s; }
-  .reel-flash:nth-child(2) { background: linear-gradient(45deg, #2a2520 0%, #0a0a0a 100%); animation-delay: 0.5s; }
-  .reel-flash:nth-child(3) { background: linear-gradient(180deg, #3a2a1a 0%, #0a0a0a 100%); animation-delay: 1.0s; }
-  .reel-flash:nth-child(4) { background: linear-gradient(90deg, #1a1a2a 0%, #0a0a0a 100%); animation-delay: 1.5s; }
-  .reel-flash:nth-child(5) { background: linear-gradient(225deg, #2a1a1a 0%, #0a0a0a 100%); animation-delay: 2.0s; }
-  .reel-flash:nth-child(6) { background: linear-gradient(315deg, #1a2a1a 0%, #0a0a0a 100%); animation-delay: 2.5s; }
-  .reel-flash:nth-child(7) { background: linear-gradient(135deg, #2a2a2a 0%, #0a0a0a 100%); animation-delay: 3.0s; }
-  .reel-flash:nth-child(8) { background: linear-gradient(45deg, #1a1a1a 0%, #000 100%); animation-delay: 3.5s; }
+  .reel-flash:nth-child(2) { background: linear-gradient(45deg, #2a2520 0%, #0a0a0a 100%); animation-delay: 0.18s; }
+  .reel-flash:nth-child(3) { background: linear-gradient(180deg, #3a2a1a 0%, #0a0a0a 100%); animation-delay: 0.36s; }
+  .reel-flash:nth-child(4) { background: linear-gradient(90deg, #1a1a2a 0%, #0a0a0a 100%); animation-delay: 0.54s; }
+  .reel-flash:nth-child(5) { background: linear-gradient(225deg, #2a1a1a 0%, #0a0a0a 100%); animation-delay: 0.72s; }
+  .reel-flash:nth-child(6) { background: linear-gradient(315deg, #1a2a1a 0%, #0a0a0a 100%); animation-delay: 0.90s; }
+  .reel-flash:nth-child(7) { background: linear-gradient(135deg, #2a2a2a 0%, #0a0a0a 100%); animation-delay: 1.08s; }
+  .reel-flash:nth-child(8) { background: linear-gradient(45deg, #1a1a1a 0%, #000 100%); animation-delay: 1.26s; }
   @keyframes reelCut {
     0%, 100% { opacity: 0; transform: scale(1); }
     2% { opacity: 1; transform: scale(1.02); }
@@ -1946,14 +1946,14 @@
           closingReelVideo.muted = true;
           closingReelVideo.play().catch(() => {
             closingReel.classList.add('no-video');
-            setTimeout(() => closingReel.classList.add('show-text'), 5800);
+            setTimeout(() => closingReel.classList.add('show-text'), 2000);
           });
         });
       }
       closingReelVideo.addEventListener('ended', () => closingReel.classList.add('show-text'));
-      setTimeout(() => closingReel.classList.add('show-text'), 7000);
+      setTimeout(() => closingReel.classList.add('show-text'), 2000);
     } else {
-      setTimeout(() => closingReel.classList.add('show-text'), 5800);
+      setTimeout(() => closingReel.classList.add('show-text'), 2000);
     }
   }
 
