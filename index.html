@@ -1908,18 +1908,22 @@
   });
 
   let touchStartX = null;
+  let touchStartY = null;
   document.addEventListener('touchstart', (e) => {
     if (e.target.tagName === 'TEXTAREA' || e.target.tagName === 'INPUT' || e.target.tagName === 'BUTTON') return;
     touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
   }, { passive: true });
   document.addEventListener('touchend', (e) => {
     if (touchStartX === null) return;
     const dx = e.changedTouches[0].screenX - touchStartX;
-    if (Math.abs(dx) > 60) {
+    const dy = e.changedTouches[0].screenY - touchStartY;
+    if (Math.abs(dx) > 80 && Math.abs(dx) > Math.abs(dy) * 2) {
       if (dx < 0) goTo(current + 1);
       else goTo(current - 1);
     }
     touchStartX = null;
+    touchStartY = null;
   }, { passive: true });
 
   // Dynamic bottom padding
