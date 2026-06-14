@@ -269,8 +269,7 @@
     padding: 80px 32px var(--scene-pad-bottom, 160px);
     flex-direction: column;
   }
-  @media (max-width: 700px) { .scene { padding: 70px 18px var(--scene-pad-bottom, 160px); } }
-  @media (max-width: 700px) { .scene[data-scene="welcome"] { padding-bottom: 320px; } }
+  @media (max-width: 700px) { .scene { padding: 70px 18px 220px; } }
   @media (max-width: 700px) { .hide-mobile { display: none; } }
   .scene.active {
     display: flex;
@@ -903,6 +902,36 @@
   }
 
   /* ===== Video frame (welcome video, work videos) ===== */
+  .director-credits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1px;
+    border: 1px solid var(--line);
+    margin-bottom: 28px;
+  }
+  .dcg-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .dcg-item:nth-child(even) { border-right: none; }
+  .dcg-item:nth-child(3), .dcg-item:nth-child(4) { border-bottom: none; }
+  .dcg-role {
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-muted);
+    font-weight: 500;
+  }
+  .dcg-value {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+
   .video-frame {
     position: relative;
     aspect-ratio: 16 / 9;
@@ -1374,38 +1403,30 @@
           <p class="film-credit-byline">Director and founder of Tillett Film. Six years making cinematic brand films for founders and premium brands. Below, a forty-five-second note framing this proposal.</p>
         </div>
 
+      <!-- DIRECTOR CREDITS — 2×2 grid above video -->
+      <div class="director-credits-grid">
+        <div class="dcg-item">
+          <span class="dcg-role">Working since</span>
+          <span class="dcg-value">2020</span>
+        </div>
+        <div class="dcg-item">
+          <span class="dcg-role">Founder projects</span>
+          <span class="dcg-value">150+ delivered</span>
+        </div>
+        <div class="dcg-item">
+          <span class="dcg-role">Brands this year</span>
+          <span class="dcg-value">12 booked</span>
+        </div>
+        <div class="dcg-item">
+          <span class="dcg-role">Based in</span>
+          <span class="dcg-value">Berkshire, Worldwide</span>
+        </div>
+      </div>
+
       <div class="video-frame">
-        <!-- REPLACE THIS BLOCK with a real video embed.
-             Local file:  <video src="assets/welcome.mp4" controls playsinline></video>
-             Vimeo:       <iframe src="https://player.vimeo.com/video/XXXXXX" allow="autoplay; fullscreen"></iframe>
-             YouTube:     <iframe src="https://www.youtube.com/embed/XXXXXX" allow="autoplay; fullscreen"></iframe> -->
         <video src="assets/IMG_3048.mov#t=0.001" controls playsinline preload="metadata" style="width:100%;height:100%;display:block;"></video>
       </div>
       <p class="video-tag"><strong>In the video:</strong> a walkthrough of the film proposal, the production approach and what happens after green light.</p>
-
-      <!-- DIRECTOR CREDITS — film-style bio list. Each line is a credit. -->
-      <div class="director-credits">
-        <div class="director-credit-line">
-          <span class="director-credit-role">Working since</span>
-          <span class="director-credit-rule"></span>
-          <span class="director-credit-value">2020</span>
-        </div>
-        <div class="director-credit-line">
-          <span class="director-credit-role">Founder projects</span>
-          <span class="director-credit-rule"></span>
-          <span class="director-credit-value">150+ delivered</span>
-        </div>
-        <div class="director-credit-line">
-          <span class="director-credit-role">Brands this year</span>
-          <span class="director-credit-rule"></span>
-          <span class="director-credit-value">12 booked</span>
-        </div>
-        <div class="director-credit-line">
-          <span class="director-credit-role">Based in</span>
-          <span class="director-credit-rule"></span>
-          <span class="director-credit-value">Berkshire, Worldwide</span>
-        </div>
-      </div>
     </div>
   </section>
 
