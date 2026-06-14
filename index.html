@@ -101,6 +101,7 @@
     pointer-events: none;
     line-height: 1.8;
   }
+  @media (max-width: 700px) { .cover-photo-credit { font-size: 6px; letter-spacing: 0.1em; bottom: 8px; left: 10px; } }
 
   /* ===== Top bar ===== */
   .topbar {
@@ -266,7 +267,7 @@
     padding: 80px 32px var(--scene-pad-bottom, 160px);
     flex-direction: column;
   }
-  @media (max-width: 700px) { .scene { padding: 70px 22px var(--scene-pad-bottom, 180px); } }
+  @media (max-width: 700px) { .scene { padding: 70px 18px var(--scene-pad-bottom, 220px); } }
   .scene.active {
     display: flex;
     animation: sceneIn 0.7s cubic-bezier(.4,0,.2,1);
