@@ -269,6 +269,7 @@
     flex-direction: column;
   }
   @media (max-width: 700px) { .scene { padding: 70px 18px 300px; } }
+  @media (max-width: 700px) { .hide-mobile { display: none; } }
   .scene.active {
     display: flex;
     animation: sceneIn 0.7s cubic-bezier(.4,0,.2,1);
@@ -1392,12 +1393,12 @@
           <span class="director-credit-rule"></span>
           <span class="director-credit-value">150+ delivered</span>
         </div>
-        <div class="director-credit-line">
+        <div class="director-credit-line hide-mobile">
           <span class="director-credit-role">Brands this year</span>
           <span class="director-credit-rule"></span>
           <span class="director-credit-value">12 booked</span>
         </div>
-        <div class="director-credit-line">
+        <div class="director-credit-line hide-mobile">
           <span class="director-credit-role">Based in</span>
           <span class="director-credit-rule"></span>
           <span class="director-credit-value">Berkshire, Worldwide</span>
