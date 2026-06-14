@@ -263,12 +263,12 @@
   .scene {
     position: absolute; inset: 0;
     display: none;
-    overflow-y: auto; overflow-x: hidden;
+    overflow-y: scroll; overflow-x: hidden;
     -webkit-overflow-scrolling: touch;
     padding: 80px 32px var(--scene-pad-bottom, 160px);
     flex-direction: column;
   }
-  @media (max-width: 700px) { .scene { padding: 70px 18px var(--scene-pad-bottom, 220px); } }
+  @media (max-width: 700px) { .scene { padding: 70px 18px 300px; } }
   .scene.active {
     display: flex;
     animation: sceneIn 0.7s cubic-bezier(.4,0,.2,1);
