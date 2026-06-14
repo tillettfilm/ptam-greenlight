@@ -1931,7 +1931,7 @@
   function syncScenePadding() {
     const h = bottombar.offsetHeight;
     const extra = window.innerWidth <= 700 ? 40 : 32;
-    const val = Math.max(h + extra, window.innerWidth <= 700 ? 140 : 160);
+    const val = Math.max(h + extra, window.innerWidth <= 700 ? 180 : 160);
     document.documentElement.style.setProperty('--scene-pad-bottom', `${val}px`);
   }
   syncScenePadding();
